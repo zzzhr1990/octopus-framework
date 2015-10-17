@@ -17,15 +17,15 @@ import java.util.Locale;
  */
 @Slf4j
 public class DateUtil {
-    private static final DateTimeFormatter dayFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+    private static final DateTimeFormatter YMD_DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
-    private static final DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
+    private static final DateTimeFormatter TIME_FORMATTER = DateTimeFormatter.ofPattern("HH:mm");
 
-    private static final DateTimeFormatter daytimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    private static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
-    private static final DateTimeFormatter fullFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssXXXXX");
+    private static final DateTimeFormatter FULL_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssXXXXX");
 
-    private static final DateTimeFormatter RFC2822_Formatter = DateTimeFormatter.ofPattern("EEE, dd MMM yyyy HH:mm:ss Z", Locale.ENGLISH);
+    private static final DateTimeFormatter RFC_2822_FORMATTER = DateTimeFormatter.ofPattern("EEE, dd MMM yyyy HH:mm:ss Z", Locale.ENGLISH);
 
     public static ZoneId DEFAULT_ZONE_ID = ZoneId.of("Asia/Shanghai");
 
@@ -57,28 +57,28 @@ public class DateUtil {
         if (time == null) {
             time = new Date();
         }
-        return dayFormatter.format(time.toInstant().atZone(DEFAULT_ZONE_ID));
+        return YMD_DATE_TIME_FORMATTER.format(time.toInstant().atZone(DEFAULT_ZONE_ID));
     }
 
     public static String getTime(Date time) {
         if (time == null) {
             time = new Date();
         }
-        return timeFormatter.format(time.toInstant().atZone(DEFAULT_ZONE_ID));
+        return TIME_FORMATTER.format(time.toInstant().atZone(DEFAULT_ZONE_ID));
     }
 
     public static String getDayTime(Date time) {
         if (time == null) {
             time = new Date();
         }
-        return daytimeFormatter.format(time.toInstant().atZone(DEFAULT_ZONE_ID));
+        return DATE_TIME_FORMATTER.format(time.toInstant().atZone(DEFAULT_ZONE_ID));
     }
 
     public static String getRFC2822(Date time) {
         if (time == null) {
             time = new Date();
         }
-        return RFC2822_Formatter.format(time.toInstant().atZone(DEFAULT_ZONE_ID));
+        return RFC_2822_FORMATTER.format(time.toInstant().atZone(DEFAULT_ZONE_ID));
     }
 
     public static String getPast(Date time) {
@@ -98,7 +98,7 @@ public class DateUtil {
         if (date == null) {
             date = new Date();
         }
-        return fullFormatter.format(date.toInstant().atZone(DEFAULT_ZONE_ID));
+        return FULL_FORMATTER.format(date.toInstant().atZone(DEFAULT_ZONE_ID));
     }
 
     public static Date getDate(int year, int month) {
