@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/octopus-entity/octopus-entity.iml" filepath="$PROJECT_DIR$/octopus-entity/octopus-entity.iml" />
       <module fileurl="file://$PROJECT_DIR$/octopus-framework.iml" filepath="$PROJECT_DIR$/octopus-framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/octopus-rpc/octopus-rpc.iml" filepath="$PROJECT_DIR$/octopus-rpc/octopus-rpc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/octopus-usercenter/octopus-usercenter.iml" filepath="$PROJECT_DIR$/octopus-usercenter/octopus-usercenter.iml" />
       <module fileurl="file://$PROJECT_DIR$/octopus-util/octopus-util.iml" filepath="$PROJECT_DIR$/octopus-util/octopus-util.iml" />
     </modules>
   </component>

@@ -6,6 +6,9 @@
     <packaging>pom</packaging>
     <modules>
         <module>octopus-util</module>
+        <module>octopus-usercenter</module>
+        <module>octopus-rpc</module>
+        <module>octopus-entity</module>
     </modules>
 
     <properties>
@@ -35,6 +38,13 @@
     <artifactId>base-framework</artifactId>
     <version>1.0-SNAPSHOT</version>
     <dependencies>
+        <!-- fuck fast json -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-hibernate4</artifactId>
+            <version>2.5.3</version>
+        </dependency>
+        <!-- fuck fast json -->
         <!--framework-->
         <dependency>
             <groupId>org.springframework</groupId>

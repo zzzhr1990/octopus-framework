@@ -31,10 +31,35 @@
         <processorPath useClasspath="true" />
         <module name="octopus-util" />
       </profile>
+      <profile default="false" name="Annotation profile for octopus-rpc" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="octopus-rpc" />
+      </profile>
+      <profile default="false" name="Annotation profile for octopus-usercenter" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="octopus-usercenter" />
+      </profile>
+      <profile default="false" name="Annotation profile for octopus-entity" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="octopus-entity" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="base-framework" target="1.8" />
       <module name="octopus-base" target="1.5" />
+      <module name="octopus-entity" target="1.8" />
+      <module name="octopus-framework" target="1.8" />
+      <module name="octopus-rpc" target="1.8" />
+      <module name="octopus-usercenter" target="1.8" />
       <module name="octopus-util" target="1.8" />
     </bytecodeTargetLevel>
   </component>
