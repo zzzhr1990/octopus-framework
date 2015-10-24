@@ -1,6 +1,10 @@
 package org.octopus.entity.model;
 
+import javafx.beans.binding.MapBinding;
 import org.octopus.util.ReflectUtil;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * QueryCondition.

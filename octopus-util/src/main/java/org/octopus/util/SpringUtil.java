@@ -22,8 +22,6 @@ public class SpringUtil implements ApplicationContextAware{
 
     private static volatile ApplicationContext ac;
 
-    private static volatile Environment env;
-
     private static volatile String[] profiles;
 
     public static <T> T getBean(String name, Class<T> requiredType) {
@@ -77,7 +75,7 @@ public class SpringUtil implements ApplicationContextAware{
                 return;
             }
             ac = applicationContext;
-            env = applicationContext.getEnvironment();
+            Environment env = applicationContext.getEnvironment();
             profiles = env.getActiveProfiles();
         }
     }
